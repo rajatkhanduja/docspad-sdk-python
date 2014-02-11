@@ -50,6 +50,7 @@ class DocspadClient:
     _STATUS_PATH  = "/status.php"
     _SESSION_PATH = "/session.php"
     _DELETE_PATH  = "/delete.php"
+    _VIEW_PATH    = "/view"
 
     def _get_url(self, path):
         return self._BASE_URL + "/" + self._VERSION + path
@@ -115,7 +116,7 @@ class DocspadClient:
             raise DeletionError(returned_message)
 
     def view_url(self,session_id):
-        pass
+        return self._get_url(self._VIEW_PATH) + "/" + session_id + "/index.html"
 
 class DocspadDocument:
 
@@ -134,3 +135,8 @@ class DocspadDocument:
 
     def delete(self):
         self.docspadClient.delete_doc(self.doc_id)
+
+    def get_view_url(self, session_id=None):
+        if session_id == None:
+            session_id = self.get_new_session()
+        return self.docspadClient.view_url(session_id)
