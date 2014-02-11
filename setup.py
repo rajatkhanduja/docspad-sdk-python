@@ -1,9 +1,9 @@
 from setuptools import setup
  
 setup(
-    name = 'bookpad',
+    name = 'bookpad-sdk',
     packages = ['bookpad'],
-    version = '0.0.1',
+    version = '0.5',
     description = 'Bookpad SDK',
     author='Rajat Khanduja',
     author_email='rajatkhanduja13@gmail.com',
@@ -13,9 +13,8 @@ setup(
         'Programming Language :: Python :: 2',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Development Status :: 1 - Planning',
-        'Environment :: Console',
-        'Intended Audience :: Science/Research',
-        'Topic :: Scientific/Engineering :: GIS'
+        'Development Status :: 2 - Pre-alpha',
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Libraries'
     ]
 )
