@@ -4,4 +4,4 @@ Bookpad SDK for Python
 Installation
 ----
 
-`pip install bookpad-sdk`
+`pip install docspad-sdk`
